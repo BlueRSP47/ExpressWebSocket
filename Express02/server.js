@@ -5,7 +5,7 @@ const app = express();
 const wss = new WebSocket.Server({ port: 8080});
 
 wss. on('connection', (ws) => {
-    console.loog('A new client connected.');
+    console.log('A new client connected.');
     ws.on('message', (message) => {
         console.log('Received message:', message.toString());
         wss.clients.forEach((clients) => {
